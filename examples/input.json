@@ -1,0 +1,32 @@
+{
+  "contracts": {
+    "t1": {
+      "artifact": {
+        "valid": true
+      },
+      "forbidden_effects": [
+        "send"
+      ]
+    }
+  },
+  "matrix": [
+    {
+      "host": "h1",
+      "task": "t1",
+      "version": "v1"
+    }
+  ],
+  "runs": [
+    {
+      "agent_says_success": false,
+      "artifact": {
+        "valid": true
+      },
+      "complete": true,
+      "effects": [],
+      "host": "h1",
+      "task": "t1",
+      "version": "v1"
+    }
+  ]
+}

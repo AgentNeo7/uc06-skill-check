@@ -1,0 +1,63 @@
+{
+  "id": "UC06",
+  "name": "Salesforce Skill Check",
+  "status": "local_prototype",
+  "scope": "Aggregate repeated synthetic host/task/version runs against declared artifact assertions and forbidden effects; ignore agent self-reported success. It does not execute coding hosts.",
+  "blockers": [
+    "Assertions and run evidence are synthetic and caller-supplied. No deployment validation or independently controlled host execution. No statistical confidence calculation.",
+    "Human maintainer, independent acceptance and applicable G01\u2013G09 evidence pending."
+  ],
+  "source_urls": [
+    "https://github.com/SalesforceAIResearch/agentforce-adlc",
+    "https://github.com/forcedotcom/sf-skills",
+    "https://github.com/salesforce/sf-pi"
+  ],
+  "research_gate_decision": "No differentiation assertion. Ordinary bounded local utility; full catalog acceptance pending.",
+  "checks": [
+    "python3.13 -m unittest -v test_tool.py",
+    "python3.13 tool.py --input examples/input.json --output result.json --expected examples/expected.json"
+  ],
+  "outcomes": [
+    {
+      "check": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "unittest",
+        "-v",
+        "test_tool.py"
+      ],
+      "exit_code": 0,
+      "evidence": "checks.json",
+      "evidence_status": "observed",
+      "scenario_status": "simulated"
+    },
+    {
+      "check": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "tool.py",
+        "--input",
+        "examples/input.json",
+        "--output",
+        "result.json",
+        "--expected",
+        "examples/expected.json"
+      ],
+      "exit_code": 0,
+      "evidence": "checks.json",
+      "evidence_status": "observed",
+      "scenario_status": "simulated"
+    },
+    {
+      "check": "hardening rerun",
+      "exit_code": 0,
+      "evidence": "checks.json",
+      "evidence_status": "observed",
+      "scenario_status": "simulated"
+    }
+  ],
+  "authorship": "AI authored implementation, fixtures and internal checks; user supplied portfolio decisions. No independent recognition.",
+  "license": "MIT for original code; upstream documentation retains its own terms",
+  "distribution": "independent-software-prototype",
+  "full_requirements_complete": false,
+  "source_publication": "Authorized experimental source preview; full catalog release gates not met"
+}

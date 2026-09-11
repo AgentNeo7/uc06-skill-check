@@ -1,0 +1,8 @@
+{
+  "authorship": "AI authored before tool.py; internal fixtures, not independent validation",
+  "sha256": {
+    "cases.json": "144288218e6d0047e1033bb6cb2bc7fc1aa7488863d576b40bf1ded2ff12309b",
+    "expected.json": "6454f73365dbb5c42838bcd674f7f70d54512691e4d6656e4eadc54912ab90ed",
+    "input.json": "3c91fbc55ac7d80837e9ad8fec6b308a2726cd75597d56d689ffb6e797da3ec4"
+  }
+}

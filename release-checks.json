@@ -1,0 +1,43 @@
+{
+  "checked_utc": "2026-09-11T06:48:48.207202+00:00",
+  "passed": true,
+  "commands": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-I",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".",
+        "-p",
+        "test_tool.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_bounded_input (test_tool.ToolTests.test_bounded_input) ... ok\ntest_cli_success_and_mismatch (test_tool.ToolTests.test_cli_success_and_mismatch) ... ok\ntest_deterministic_no_mutation (test_tool.ToolTests.test_deterministic_no_mutation) ... ok\ntest_frozen_controls (test_tool.ToolTests.test_frozen_controls) ... ok\ntest_frozen_oracles (test_tool.ToolTests.test_frozen_oracles) ... ok\ntest_invalid_input_exit_two (test_tool.ToolTests.test_invalid_input_exit_two) ... ok\ntest_missing_artifact_not_pass (test_tool.ToolTests.test_missing_artifact_not_pass) ... ok\ntest_no_oracle_overwrite (test_tool.ToolTests.test_no_oracle_overwrite) ... invalid input/execution: output must not overwrite input or oracle\nok\ntest_positive (test_tool.ToolTests.test_positive) ... ok\ntest_repeated_trials_preserve_failure (test_tool.ToolTests.test_repeated_trials_preserve_failure) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.187s\n\nOK\n",
+      "seconds": 0.24613625009078532
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-I",
+        "tool.py",
+        "--input",
+        "examples/input.json",
+        "--output",
+        "isolated-result.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.025935124955140054
+    }
+  ],
+  "test_count": 10,
+  "example_passed": true,
+  "source_sha256": "65a77db58b0a27ff26055292fb6840945ec4e0a641c29b9e13577d7ba81f9a1e",
+  "scope": "Standalone local prototype on original synthetic cases; not full catalog acceptance"
+}

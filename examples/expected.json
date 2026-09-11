@@ -1,0 +1,14 @@
+{
+  "evidence_status": "simulated",
+  "groups": [
+    {
+      "failures": 0,
+      "host": "h1",
+      "passes": 1,
+      "task": "t1",
+      "unknown": 0,
+      "version": "v1"
+    }
+  ],
+  "status": "pass"
+}

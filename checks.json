@@ -1,0 +1,53 @@
+{
+  "runtime": "3.13.14 (main, Jun 10 2026, 12:24:04) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "checks": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "unittest",
+        "-v",
+        "test_tool.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_bounded_input (test_tool.ToolTests.test_bounded_input) ... ok\ntest_cli_success_and_mismatch (test_tool.ToolTests.test_cli_success_and_mismatch) ... ok\ntest_deterministic_no_mutation (test_tool.ToolTests.test_deterministic_no_mutation) ... ok\ntest_frozen_controls (test_tool.ToolTests.test_frozen_controls) ... ok\ntest_frozen_oracles (test_tool.ToolTests.test_frozen_oracles) ... ok\ntest_invalid_input_exit_two (test_tool.ToolTests.test_invalid_input_exit_two) ... ok\ntest_missing_artifact_not_pass (test_tool.ToolTests.test_missing_artifact_not_pass) ... ok\ntest_no_oracle_overwrite (test_tool.ToolTests.test_no_oracle_overwrite) ... invalid input/execution: output must not overwrite input or oracle\nok\ntest_positive (test_tool.ToolTests.test_positive) ... ok\ntest_repeated_trials_preserve_failure (test_tool.ToolTests.test_repeated_trials_preserve_failure) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.194s\n\nOK\n",
+      "elapsed_seconds": 0.2543539999751374,
+      "evidence_status": "observed",
+      "scope": "local software execution on simulated data; internal AI checks"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "tool.py",
+        "--input",
+        "examples/input.json",
+        "--output",
+        "result.json",
+        "--expected",
+        "examples/expected.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.026635208050720394,
+      "evidence_status": "observed",
+      "scope": "local software execution on simulated data; internal AI checks"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "unittest",
+        "-v",
+        "test_tool.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_bounded_input (test_tool.ToolTests.test_bounded_input) ... ok\ntest_cli_success_and_mismatch (test_tool.ToolTests.test_cli_success_and_mismatch) ... ok\ntest_deterministic_no_mutation (test_tool.ToolTests.test_deterministic_no_mutation) ... ok\ntest_frozen_controls (test_tool.ToolTests.test_frozen_controls) ... ok\ntest_frozen_oracles (test_tool.ToolTests.test_frozen_oracles) ... ok\ntest_invalid_input_exit_two (test_tool.ToolTests.test_invalid_input_exit_two) ... ok\ntest_missing_artifact_not_pass (test_tool.ToolTests.test_missing_artifact_not_pass) ... ok\ntest_no_oracle_overwrite (test_tool.ToolTests.test_no_oracle_overwrite) ... invalid input/execution: output must not overwrite input or oracle\nok\ntest_positive (test_tool.ToolTests.test_positive) ... ok\ntest_repeated_trials_preserve_failure (test_tool.ToolTests.test_repeated_trials_preserve_failure) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.203s\n\nOK\n",
+      "reason": "rerun after numeric-envelope and typed-value hardening",
+      "evidence_status": "observed"
+    }
+  ],
+  "all_pass": true
+}
