@@ -1,0 +1,16 @@
+{
+  "status": 0,
+  "result": {
+    "summary": {
+      "testRunId": "707SYNTHETIC001",
+      "orgId": "00DSYNTHETIC000",
+      "outcome": "Passed"
+    },
+    "tests": [
+      {
+        "FullName": "ReviewActionTest.preservesUnrelatedFieldsAndCorrelatesBulk",
+        "Outcome": "Pass"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Nonnegative_Amount</fullName><active>true</active><errorConditionFormula>Amount__c &lt; 0</errorConditionFormula><errorMessage>Amount must be nonnegative.</errorMessage></ValidationRule>

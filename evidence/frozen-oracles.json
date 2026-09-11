@@ -1,0 +1,12 @@
+{
+  "frozen_before_implementation": true,
+  "evidence_status": "simulated",
+  "independent_review": false,
+  "cases": [
+    "passing independent runs qualify",
+    "failed Apex test fails",
+    "zero tests unknown",
+    "duplicate run identifiers rejected",
+    "missing environment unknown"
+  ]
+}

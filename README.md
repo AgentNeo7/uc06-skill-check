@@ -1,38 +1,58 @@
 # UC06 — Salesforce Skill Check
 
-Aggregate repeated synthetic host/task/version runs against declared artifact assertions and forbidden effects; ignore agent self-reported success. It does not execute coding hosts.
+Qualify repeated sf apex run test JSON exports against unique execution IDs, native test outcomes and skill/host provenance.
 
-Distribution: **independent-software-prototype**. Status: local_prototype. Full catalog requirements remain partial. This is useful local tooling with no claim of novelty, production readiness or independent validation.
+This is a Salesforce DX prototype with actual Apex, Flow, custom-object, validation-rule and permission-set metadata. The offline Node CLI inspects Salesforce artifacts. No Python runtime is used. Source API version64.0 is an explicit compatibility target, not a claim that it is the newest API.
 
-## Run
+## Run locally
 
-Requires Python 3.13 (checked with 3.13.14), standard library only. Copy this whole folder anywhere; no parent repository imports or installed packages are required.
+Requires Node22 or later. Use a clean checkout:
 
 ```sh
-python3.13 tool.py --input examples/input.json --output result.json --expected examples/expected.json
-python3.13 -m unittest -v test_tool.py
+npm ci --ignore-scripts
+npm test
+npm run example
+node src/cli.mjs --project . --config examples/config.json
 ```
 
-`--expected` is optional and compares the complete output against an explicit oracle. Exit 0 means report generation completed; it can include failures or unknowns. Exit 1 means the explicit comparison mismatched. Exit 2 means invalid input or execution error. The output never authorizes a deployment. Root input must be an object, at most 2 MB, with at most 1,000 members per container and 30 levels. Duplicate JSON keys and nonfinite numbers are rejected. Output cannot overwrite the input or oracle.
+The CLI prints JSON. `pass` means the supplied artifact satisfies the supported local check; `unknown` means coverage/evidence is incomplete; `fail` means a concrete supported check failed. CLI exit code2 means invalid input. A business finding stays in JSON; CI must gate on `status`. The UC08 example intentionally flags a synthetic sensitive-field grant, and UC10 intentionally leaves FSC mappings unknown.
 
-## Input and evidence
+## Salesforce validation
 
-`examples/input.json` demonstrates the complete input contract for this bounded utility. `examples/expected.json` is the frozen expected result. Additional positive, negative and unknown examples live in `examples/cases.json` (UC02 instead reuses 24 original fixtures). `examples/frozen.json` pins their hashes before implementation. `test_tool.py` adds adversarial checks. `checks.json` records actual checks and outcomes.
+No org is accessed by the offline CLI. Validate only in an explicitly authorized development org. Replace the placeholder with its confirmed alias:
 
-All example records, identities, outputs and business scenarios are synthetic. Input observations are assertions supplied by the caller; this tool does not independently collect them. Reports label scenario evidence simulated. Internal AI-authored oracles are separate from generated outputs but are not independent evaluation.
+```sh
+sf project deploy start --dry-run --test-level RunLocalTests --target-org explicit-sandbox --source-dir force-app
+```
 
-## Limits and remaining acceptance
+The package includes ReviewActionTest. **The supplied metadata and Apex test package passed native Developer-org dry-run validation.** This scoped result is separate from full functional acceptance. Test-created records roll back with Apex test transactions. The Flow is Draft. The sample action queries and updates in user mode, checks explicit synthetic correlation IDs and consent, and never calls an external service. The synthetic consent Boolean is a demo contract, not legal consent verification.
 
-Assertions and run evidence are synthetic and caller-supplied. No deployment validation or independently controlled host execution. No statistical confidence calculation.
+Every tool contains the same small synthetic servicing fixture so it can be cloned independently. Do not deploy all copies into one org as different applications: they intentionally use the same metadata names. Validate packages independently or share the common fixture layer. Runtime isolation and sharing/FLS require org tests with approved identities.
 
-`requirements.json` preserves the five original requirement rows, acceptance text, bounded coverage, checks and remaining blockers. `capability.json` records scope and release state. No full requirement is certified by a small fixture suite. Native behavior, domain authority, real integration, independent reproduction and maintainable releases remain gated.
+## Acceptance coverage
 
-Comparator to evaluate: Installation checks + single-org CI; sf-skills/ADLC/SF Pi workflows. Current features have not been independently benchmarked by this prototype. Sources in `capability.json` are catalog research leads except UC03, whose pinned public-source inspection is in `research-sources.json` and `research.md`.
+| Requirement | Original acceptance check | Current coverage | Status |
+|---|---|---|---|
+| UC06-R01 | Success cannot be awarded solely by the evaluated agent’s self-report. | Versioned skill and host values required with sf test execution provenance. | Partial; broader acceptance pending |
+| UC06-R02 | Adapter reports actual available capabilities and unsupported controls. | Distinct repeat execution IDs and nonempty native-shaped test arrays verified. | Partial; broader acceptance pending |
+| UC06-R03 | Nominal installation compatibility is distinguished from successful execution. | Failed tests/summary outcomes reject qualification; missing metadata unknown. | Partial; broader acceptance pending |
+| UC06-R04 | Failures and uncertainty are included alongside successful runs. | Real host adapters and provider/version drift evaluation pending. | Partial; broader acceptance pending |
+| UC06-R05 | A failing update can be held while the prior qualified version remains reproducible. | Local CLI result supports regression consumption; public host qualification unproven. | Partial; broader acceptance pending |
 
-## Authorship and rights
+Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending.
 
-AI authored the code, examples and internal tests in this run. Balaji supplied the portfolio direction and constraints; this does not attribute all implementation work to him. No private employer, customer or petition records appear in these examples. Original code is licensed under MIT; see LICENSE. No permission to publish third-party or employer-owned assets is implied.
+## Evidence and comparison
 
-## Source preview status
+`evidence/frozen-oracles.json` records synthetic oracle intents before implementation. `evidence/offline-tests-final.log` records internal Node checks. Failed attempts remain beside the final log. `evidence/example-result.json` is a simulation generated from shipped metadata/test exports; it is not org evidence. Existing native Salesforce facilities are a baseline to evaluate, not an absent capability. No differentiation or independent recognition is asserted. See `evidence/sources.json` for retrieved official-source boundaries.
 
-Experimental offline source; scoped tests passed, full original acceptance is incomplete. See [release status](RELEASE_STATUS.md), [checks](release-checks.json), [requirements](requirements.json) and [attribution](ATTRIBUTION.md). No production, independent-validation or differentiation claim.
+New code and synthetic examples were authored by AI under Balaji's Salesforce focus and publication direction. That is not evidence that Balaji personally wrote all code. His architectural review, changed decisions, native results and external use must be recorded separately before any contribution claim. No legal outcome is promised.
+
+Shared helper: `src/common.mjs` (same reviewed source copied to standalone UC01–10); XML parser pinned by `package-lock.json`. It rejects malformed XML, DTD/entity declarations and foreign Metadata API namespaces. It is not a full Salesforce schema validator or Apex compiler.
+
+Experimental source preview only. Full acceptance and supported release remain gated.
+
+Native remediation: USER_MODE query results now materialize before iteration to avoid the observed native tmpVar1 query failure. DML uses a sparse Id/Status object. Tests use a Standard User with only Review_Operator permission assignment and owned synthetic records. Runtime permissions grant read/edit on the custom request and read-only consent; universally required custom fields do not accept separately configurable FLS. Sensitive notes are not granted to the operator. UC08's separate Exposure_Probe fixture is intentionally unassigned.
+
+## Distribution
+
+Salesforce is the primary implementation. Historical Python source is under `legacy/python-prototype`. See `RELEASE_STATUS.md` and `SALESFORCE_VALIDATION.json`. Full acceptance remains partial.

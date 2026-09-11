@@ -1,0 +1,56 @@
+
+> salesforce-uc06@0.2.0 test
+> node --test
+
+TAP version 13
+# Subtest: reject malformed Salesforce XML
+ok 1 - reject malformed Salesforce XML
+  ---
+  duration_ms: 8.240292
+  type: 'test'
+  ...
+# Subtest: reject XML external entity declarations
+ok 2 - reject XML external entity declarations
+  ---
+  duration_ms: 5.004667
+  type: 'test'
+  ...
+# Subtest: two distinct native-shaped runs qualify
+ok 3 - two distinct native-shaped runs qualify
+  ---
+  duration_ms: 5.366
+  type: 'test'
+  ...
+# Subtest: failed Apex method fails
+ok 4 - failed Apex method fails
+  ---
+  duration_ms: 5.870417
+  type: 'test'
+  ...
+# Subtest: zero test run is unknown
+ok 5 - zero test run is unknown
+  ---
+  duration_ms: 5.471125
+  type: 'test'
+  ...
+# Subtest: duplicate run identifiers are unknown
+ok 6 - duplicate run identifiers are unknown
+  ---
+  duration_ms: 5.562125
+  type: 'test'
+  ...
+# Subtest: missing org provenance unknown
+ok 7 - missing org provenance unknown
+  ---
+  duration_ms: 4.346375
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 111.031708

@@ -1,0 +1,8 @@
+{
+  "runs": [
+    "examples/run1.json",
+    "examples/run2.json"
+  ],
+  "skillVersion": "synthetic-review-skill-1",
+  "hostVersion": "synthetic-host-1"
+}

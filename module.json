@@ -1,0 +1,95 @@
+{
+  "id": "UC06",
+  "name": "Salesforce Skill Check",
+  "platform": "Salesforce",
+  "language": [
+    "Apex",
+    "Flow Metadata XML",
+    "JavaScript"
+  ],
+  "sourceApiVersion": "64.0",
+  "scope": "Qualify repeated sf apex run test JSON exports against unique execution IDs, native test outcomes and skill/host provenance.",
+  "requirements": [
+    {
+      "id": "UC06-R01",
+      "title": "Task specification",
+      "acceptance_check": "Success cannot be awarded solely by the evaluated agent\u2019s self-report.",
+      "source_implementation": "Define prerequisites, permitted tools, expected artifacts and prohibited effects independently of the tested skill.",
+      "source_prerequisites": "Maintainer-approved tasks; M3; synthetic repository/org fixtures.",
+      "status": "partial_native_unverified",
+      "coverage": "Versioned skill and host values required with sf test execution provenance.",
+      "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
+    },
+    {
+      "id": "UC06-R02",
+      "title": "Host adapters",
+      "acceptance_check": "Adapter reports actual available capabilities and unsupported controls.",
+      "source_implementation": "Run the same task through two selected coding hosts in isolated environments.",
+      "source_prerequisites": "R01; host/API access; license/cost allowance; D6.",
+      "status": "partial_native_unverified",
+      "coverage": "Distinct repeat execution IDs and nonempty native-shaped test arrays verified.",
+      "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
+    },
+    {
+      "id": "UC06-R03",
+      "title": "Outcome verification",
+      "acceptance_check": "Nominal installation compatibility is distinguished from successful execution.",
+      "source_implementation": "Check deployment, test results and supported record outcomes.",
+      "source_prerequisites": "R02; D2 when live; reset fixtures; independent assertions.",
+      "status": "partial_native_unverified",
+      "coverage": "Failed tests/summary outcomes reject qualification; missing metadata unknown.",
+      "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
+    },
+    {
+      "id": "UC06-R04",
+      "title": "Repeated comparisons",
+      "acceptance_check": "Failures and uncertainty are included alongside successful runs.",
+      "source_implementation": "Pin versions, repeat nondeterministic trials and track cost, false passes and variance.",
+      "source_prerequisites": "R03; baseline skill/model versions; trial budget.",
+      "status": "partial_native_unverified",
+      "coverage": "Real host adapters and provider/version drift evaluation pending.",
+      "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
+    },
+    {
+      "id": "UC06-R05",
+      "title": "Release gate",
+      "acceptance_check": "A failing update can be held while the prior qualified version remains reproducible.",
+      "source_implementation": "Generate versioned compatibility reports and configurable CI acceptance policies.",
+      "source_prerequisites": "R04; external maintainer/owner criteria; CI runner.",
+      "status": "partial_native_unverified",
+      "coverage": "Local CLI result supports regression consumption; public host qualification unproven.",
+      "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
+    }
+  ],
+  "blockers": [
+    "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
+  ],
+  "native_tests": [
+    "ReviewActionTest"
+  ],
+  "native_test_status": "not_run",
+  "commands": [
+    "npm ci --ignore-scripts",
+    "npm test",
+    "npm run example",
+    "sf project deploy start --dry-run --test-level RunLocalTests --target-org explicit-sandbox --source-dir force-app"
+  ],
+  "evidence_status": "simulated",
+  "publication": "candidate_source_preview",
+  "full_acceptance": false,
+  "shared_fixture": "Synthetic consent-gated Review_Request__c service action; same source copied for standalone packages",
+  "shared_helper": {
+    "path": "src/common.mjs",
+    "sha256": "d137db227e5948dec9a250ff8d48b91a85cacc5ab0722b1ae798acedc7560ebc",
+    "dependency": "fast-xml-parser@5.11.1"
+  },
+  "status": "scoped_native_validated",
+  "full_acceptance_complete": false,
+  "native_validation": {
+    "status": "passed",
+    "mode": "dry-run",
+    "tests_completed": 3,
+    "persisted_deployment": false,
+    "scope": "one Developer org; scoped unit tests and supplied metadata only"
+  }
+}

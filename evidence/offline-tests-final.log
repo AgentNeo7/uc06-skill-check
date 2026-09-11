@@ -1,0 +1,74 @@
+
+> salesforce-uc06@0.2.0 test
+> node --test
+
+TAP version 13
+# Subtest: reject malformed Salesforce XML
+ok 1 - reject malformed Salesforce XML
+  ---
+  duration_ms: 10.328417
+  type: 'test'
+  ...
+# Subtest: reject XML external entity declarations
+ok 2 - reject XML external entity declarations
+  ---
+  duration_ms: 6.308666
+  type: 'test'
+  ...
+# Subtest: two distinct native-shaped runs qualify
+ok 3 - two distinct native-shaped runs qualify
+  ---
+  duration_ms: 4.8455
+  type: 'test'
+  ...
+# Subtest: failed Apex method fails
+ok 4 - failed Apex method fails
+  ---
+  duration_ms: 5.014333
+  type: 'test'
+  ...
+# Subtest: zero test run is unknown
+ok 5 - zero test run is unknown
+  ---
+  duration_ms: 4.897709
+  type: 'test'
+  ...
+# Subtest: duplicate run identifiers are unknown
+ok 6 - duplicate run identifiers are unknown
+  ---
+  duration_ms: 4.895041
+  type: 'test'
+  ...
+# Subtest: missing org provenance unknown
+ok 7 - missing org provenance unknown
+  ---
+  duration_ms: 5.545458
+  type: 'test'
+  ...
+# Subtest: all shipped DX XML is well formed
+ok 8 - all shipped DX XML is well formed
+  ---
+  duration_ms: 9.606291
+  type: 'test'
+  ...
+# Subtest: reject well-formed XML from another namespace
+ok 9 - reject well-formed XML from another namespace
+  ---
+  duration_ms: 4.773917
+  type: 'test'
+  ...
+# Subtest: preserve meaningful whitespace in Flow literal values
+ok 10 - preserve meaningful whitespace in Flow literal values
+  ---
+  duration_ms: 5.274834
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 139.100042

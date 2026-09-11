@@ -1,57 +1,52 @@
 [
   {
-    "requirement_id": "UC06-R01",
+    "id": "UC06-R01",
     "title": "Task specification",
     "acceptance_check": "Success cannot be awarded solely by the evaluated agent\u2019s self-report.",
     "source_implementation": "Define prerequisites, permitted tools, expected artifacts and prohibited effects independently of the tested skill.",
     "source_prerequisites": "Maintainer-approved tasks; M3; synthetic repository/org fixtures.",
-    "status": "partial_local_only",
-    "coverage": "Aggregate repeated synthetic host/task/version runs against declared artifact assertions and forbidden effects; ignore agent self-reported success. It does not execute coding hosts.",
-    "blocker": "Assertions and run evidence are synthetic and caller-supplied. No deployment validation or independently controlled host execution. No statistical confidence calculation.",
-    "check": "python3.13 -m unittest -v test_tool.py; examples/frozen.json; checks.json (internal only)"
+    "status": "partial_native_unverified",
+    "coverage": "Versioned skill and host values required with sf test execution provenance.",
+    "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
   },
   {
-    "requirement_id": "UC06-R02",
+    "id": "UC06-R02",
     "title": "Host adapters",
     "acceptance_check": "Adapter reports actual available capabilities and unsupported controls.",
     "source_implementation": "Run the same task through two selected coding hosts in isolated environments.",
     "source_prerequisites": "R01; host/API access; license/cost allowance; D6.",
-    "status": "partial_local_only",
-    "coverage": "Aggregate repeated synthetic host/task/version runs against declared artifact assertions and forbidden effects; ignore agent self-reported success. It does not execute coding hosts.",
-    "blocker": "Assertions and run evidence are synthetic and caller-supplied. No deployment validation or independently controlled host execution. No statistical confidence calculation.",
-    "check": "python3.13 -m unittest -v test_tool.py; examples/frozen.json; checks.json (internal only)"
+    "status": "partial_native_unverified",
+    "coverage": "Distinct repeat execution IDs and nonempty native-shaped test arrays verified.",
+    "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
   },
   {
-    "requirement_id": "UC06-R03",
+    "id": "UC06-R03",
     "title": "Outcome verification",
     "acceptance_check": "Nominal installation compatibility is distinguished from successful execution.",
     "source_implementation": "Check deployment, test results and supported record outcomes.",
     "source_prerequisites": "R02; D2 when live; reset fixtures; independent assertions.",
-    "status": "partial_local_only",
-    "coverage": "Aggregate repeated synthetic host/task/version runs against declared artifact assertions and forbidden effects; ignore agent self-reported success. It does not execute coding hosts.",
-    "blocker": "Assertions and run evidence are synthetic and caller-supplied. No deployment validation or independently controlled host execution. No statistical confidence calculation.",
-    "check": "python3.13 -m unittest -v test_tool.py; examples/frozen.json; checks.json (internal only)"
+    "status": "partial_native_unverified",
+    "coverage": "Failed tests/summary outcomes reject qualification; missing metadata unknown.",
+    "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
   },
   {
-    "requirement_id": "UC06-R04",
+    "id": "UC06-R04",
     "title": "Repeated comparisons",
     "acceptance_check": "Failures and uncertainty are included alongside successful runs.",
     "source_implementation": "Pin versions, repeat nondeterministic trials and track cost, false passes and variance.",
     "source_prerequisites": "R03; baseline skill/model versions; trial budget.",
-    "status": "partial_local_only",
-    "coverage": "Aggregate repeated synthetic host/task/version runs against declared artifact assertions and forbidden effects; ignore agent self-reported success. It does not execute coding hosts.",
-    "blocker": "Assertions and run evidence are synthetic and caller-supplied. No deployment validation or independently controlled host execution. No statistical confidence calculation.",
-    "check": "python3.13 -m unittest -v test_tool.py; examples/frozen.json; checks.json (internal only)"
+    "status": "partial_native_unverified",
+    "coverage": "Real host adapters and provider/version drift evaluation pending.",
+    "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
   },
   {
-    "requirement_id": "UC06-R05",
+    "id": "UC06-R05",
     "title": "Release gate",
     "acceptance_check": "A failing update can be held while the prior qualified version remains reproducible.",
     "source_implementation": "Generate versioned compatibility reports and configurable CI acceptance policies.",
     "source_prerequisites": "R04; external maintainer/owner criteria; CI runner.",
-    "status": "partial_local_only",
-    "coverage": "Aggregate repeated synthetic host/task/version runs against declared artifact assertions and forbidden effects; ignore agent self-reported success. It does not execute coding hosts.",
-    "blocker": "Assertions and run evidence are synthetic and caller-supplied. No deployment validation or independently controlled host execution. No statistical confidence calculation.",
-    "check": "python3.13 -m unittest -v test_tool.py; examples/frozen.json; checks.json (internal only)"
+    "status": "partial_native_unverified",
+    "coverage": "Local CLI result supports regression consumption; public host qualification unproven.",
+    "blocker": "Real coding-host runs, actual skill version artifacts, broader task outcomes, independent qualification workloads and native org execution remain pending."
   }
 ]

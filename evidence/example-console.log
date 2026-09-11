@@ -1,0 +1,27 @@
+
+> salesforce-uc06@0.2.0 example
+> node src/cli.mjs --project . --config examples/config.json
+
+{
+  "schemaVersion": 1,
+  "platform": "Salesforce",
+  "evidence_status": "simulated",
+  "native_execution": "not_run",
+  "status": "pass",
+  "findings": [],
+  "runs": [
+    {
+      "id": "707SYNTHETIC001",
+      "tests": 1,
+      "outcome": "Passed"
+    },
+    {
+      "id": "707SYNTHETIC002",
+      "tests": 1,
+      "outcome": "Passed"
+    }
+  ],
+  "skillVersion": "synthetic-review-skill-1",
+  "hostVersion": "synthetic-host-1",
+  "scope": "Consumes sf apex run test --json result exports; synthetic examples only; passing Apex tests do not establish skill quality"
+}

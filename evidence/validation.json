@@ -1,0 +1,25 @@
+{
+  "offline_execution": "observed",
+  "fixtures": "simulated",
+  "node_tests": {
+    "passed": 10,
+    "failed": 0,
+    "log": "evidence/offline-tests-final.log"
+  },
+  "example": "evidence/example-result.json",
+  "native_execution": "not_run_by_module_agent; parent coordinating authorized development org",
+  "independent_review": false,
+  "original_acceptance_requirements": 5,
+  "full_acceptance": false,
+  "failed_attempts": [
+    "offline-tests-first.log: file URL percent-encoding harness bug",
+    "offline-tests-second.log: passed subset",
+    "offline-tests-fourth.log: UC02 unknown-signature false error/UC03 refinement else-chain defect fixed; see exact module log"
+  ],
+  "offline_execution_after_native_remediation": {
+    "passed": 10,
+    "failed": 0,
+    "log": "evidence/offline-tests-native-fix.log"
+  },
+  "native_remediation": "Observed tmpVar1 USER_MODE SOQL-for-loop error; query materialized before loop, sparse user-mode DML and least-privilege test user added. Native rerun owned by parent."
+}

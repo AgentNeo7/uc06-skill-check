@@ -1,0 +1,92 @@
+[
+  {
+    "path": ".github/workflows/validate.yml",
+    "sha256": "69909f2d6f316f71100a3fec74d5d79e6997dd4dc84b2ebbaa94d19f67f1e8f1",
+    "bytes": 488
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "20038cf9d9358b0fa34cbe4a2a199fa94e58852359846483d05dc5f08ef933d0",
+    "bytes": 50
+  },
+  {
+    "path": ".python-version",
+    "sha256": "f8faecf2505680716c6279bf2cdec3d5a5ba2ba852f0d7df45d51ac1ce8d9ade",
+    "bytes": 8
+  },
+  {
+    "path": "ATTRIBUTION.md",
+    "sha256": "ae950a171e3c4005b5824b0713a54db40a5b43a72b36652c4190d0ad0d5be200",
+    "bytes": 668
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "f5eee63fb76b6585d82d7c3e7e7c5136331316c3256e72cb6bdf587f234d20de",
+    "bytes": 1077
+  },
+  {
+    "path": "README.md",
+    "sha256": "b6557c9aa5750026b79f74f73d8491dd4969b856563345eb141fef9a14b663a7",
+    "bytes": 3667
+  },
+  {
+    "path": "RELEASE_STATUS.md",
+    "sha256": "ddfffb46be8f71fbf60b0a44ba78129e4a942f48bf4137cbf35e4547bad46cec",
+    "bytes": 1156
+  },
+  {
+    "path": "capability.json",
+    "sha256": "b3de23e122afa1c454116d083a838c9ff07bb782ce47f7eb568b0c0c3c525205",
+    "bytes": 2349
+  },
+  {
+    "path": "checks.json",
+    "sha256": "e846ea26b54039ea66231ec198e7f35ed2e8e9d1aa92c9fd58721f50e76830f0",
+    "bytes": 3327
+  },
+  {
+    "path": "examples/cases.json",
+    "sha256": "144288218e6d0047e1033bb6cb2bc7fc1aa7488863d576b40bf1ded2ff12309b",
+    "bytes": 2443
+  },
+  {
+    "path": "examples/expected.json",
+    "sha256": "6454f73365dbb5c42838bcd674f7f70d54512691e4d6656e4eadc54912ab90ed",
+    "bytes": 210
+  },
+  {
+    "path": "examples/frozen.json",
+    "sha256": "8079477809ac3f2305e155ad911e46d501340c5957646917ecc9634a1cca763e",
+    "bytes": 375
+  },
+  {
+    "path": "examples/input.json",
+    "sha256": "3c91fbc55ac7d80837e9ad8fec6b308a2726cd75597d56d689ffb6e797da3ec4",
+    "bytes": 461
+  },
+  {
+    "path": "release-checks.json",
+    "sha256": "0fcb27bb27a113190b776dd1badf3f698d4bde3653270179f30af30fadfb1377",
+    "bytes": 1984
+  },
+  {
+    "path": "requirements.json",
+    "sha256": "c6c3706c09710e83d8035ebc4f0499382784b855b69840aa93ba859325341fd7",
+    "bytes": 4571
+  },
+  {
+    "path": "requirements.lock",
+    "sha256": "8df9d391f9d6b1c16a647aa6a0ad3baee6e6bc2fac546b2e12e918f661b47d5b",
+    "bytes": 144
+  },
+  {
+    "path": "test_tool.py",
+    "sha256": "b1cca64ca7d2a4ec9f96b5200e320c27d1c5b24e1ca14c3e3426a25fbd7b2de8",
+    "bytes": 3795
+  },
+  {
+    "path": "tool.py",
+    "sha256": "65a77db58b0a27ff26055292fb6840945ec4e0a641c29b9e13577d7ba81f9a1e",
+    "bytes": 4626
+  }
+]

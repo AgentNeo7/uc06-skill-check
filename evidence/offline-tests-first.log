@@ -1,0 +1,159 @@
+
+> salesforce-uc06@0.2.0 test
+> node --test
+
+TAP version 13
+# Subtest: reject malformed Salesforce XML
+not ok 1 - reject malformed Salesforce XML
+  ---
+  duration_ms: 0.762458
+  type: 'test'
+  location: '<workspace>/salesforce/uc06/test/tool.test.mjs:6:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, lstat '<workspace>/salesforce/uc06/force-app'"
+  code: 'ENOENT'
+  stack: |-
+    cpSyncFn (node:internal/fs/cp/cp-sync:56:13)
+    Object.cpSync (node:fs:3132:3)
+    sandbox (file://<workspace>/salesforce/uc06/test/tool.test.mjs:3:88)
+    TestContext.<anonymous> (file://<workspace>/salesforce/uc06/test/tool.test.mjs:6:44)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: reject XML external entity declarations
+not ok 2 - reject XML external entity declarations
+  ---
+  duration_ms: 0.142833
+  type: 'test'
+  location: '<workspace>/salesforce/uc06/test/tool.test.mjs:7:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, lstat '<workspace>/salesforce/uc06/force-app'"
+  code: 'ENOENT'
+  stack: |-
+    cpSyncFn (node:internal/fs/cp/cp-sync:56:13)
+    Object.cpSync (node:fs:3132:3)
+    sandbox (file://<workspace>/salesforce/uc06/test/tool.test.mjs:3:88)
+    TestContext.<anonymous> (file://<workspace>/salesforce/uc06/test/tool.test.mjs:7:52)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: two distinct native-shaped runs qualify
+not ok 3 - two distinct native-shaped runs qualify
+  ---
+  duration_ms: 0.333375
+  type: 'test'
+  location: '<workspace>/salesforce/uc06/test/tool.test.mjs:10:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, lstat '<workspace>/salesforce/uc06/force-app'"
+  code: 'ENOENT'
+  stack: |-
+    cpSyncFn (node:internal/fs/cp/cp-sync:56:13)
+    Object.cpSync (node:fs:3132:3)
+    sandbox (file://<workspace>/salesforce/uc06/test/tool.test.mjs:3:88)
+    TestContext.<anonymous> (file://<workspace>/salesforce/uc06/test/tool.test.mjs:10:52)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: failed Apex method fails
+not ok 4 - failed Apex method fails
+  ---
+  duration_ms: 0.249542
+  type: 'test'
+  location: '<workspace>/salesforce/uc06/test/tool.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, lstat '<workspace>/salesforce/uc06/force-app'"
+  code: 'ENOENT'
+  stack: |-
+    cpSyncFn (node:internal/fs/cp/cp-sync:56:13)
+    Object.cpSync (node:fs:3132:3)
+    sandbox (file://<workspace>/salesforce/uc06/test/tool.test.mjs:3:88)
+    TestContext.<anonymous> (file://<workspace>/salesforce/uc06/test/tool.test.mjs:11:37)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: zero test run is unknown
+not ok 5 - zero test run is unknown
+  ---
+  duration_ms: 0.185667
+  type: 'test'
+  location: '<workspace>/salesforce/uc06/test/tool.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, lstat '<workspace>/salesforce/uc06/force-app'"
+  code: 'ENOENT'
+  stack: |-
+    cpSyncFn (node:internal/fs/cp/cp-sync:56:13)
+    Object.cpSync (node:fs:3132:3)
+    sandbox (file://<workspace>/salesforce/uc06/test/tool.test.mjs:3:88)
+    TestContext.<anonymous> (file://<workspace>/salesforce/uc06/test/tool.test.mjs:12:37)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: duplicate run identifiers are unknown
+not ok 6 - duplicate run identifiers are unknown
+  ---
+  duration_ms: 0.261208
+  type: 'test'
+  location: '<workspace>/salesforce/uc06/test/tool.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, lstat '<workspace>/salesforce/uc06/force-app'"
+  code: 'ENOENT'
+  stack: |-
+    cpSyncFn (node:internal/fs/cp/cp-sync:56:13)
+    Object.cpSync (node:fs:3132:3)
+    sandbox (file://<workspace>/salesforce/uc06/test/tool.test.mjs:3:88)
+    TestContext.<anonymous> (file://<workspace>/salesforce/uc06/test/tool.test.mjs:13:50)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: missing org provenance unknown
+not ok 7 - missing org provenance unknown
+  ---
+  duration_ms: 0.153042
+  type: 'test'
+  location: '<workspace>/salesforce/uc06/test/tool.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, lstat '<workspace>/salesforce/uc06/force-app'"
+  code: 'ENOENT'
+  stack: |-
+    cpSyncFn (node:internal/fs/cp/cp-sync:56:13)
+    Object.cpSync (node:fs:3132:3)
+    sandbox (file://<workspace>/salesforce/uc06/test/tool.test.mjs:3:88)
+    TestContext.<anonymous> (file://<workspace>/salesforce/uc06/test/tool.test.mjs:14:43)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 0
+# fail 7
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 68.284375

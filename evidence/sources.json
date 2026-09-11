@@ -1,0 +1,31 @@
+{
+  "retrieved_at": "2026-09-11",
+  "classification": "externally_reported",
+  "sources": [
+    {
+      "title": "Invocable Apex and Flow inputs",
+      "url": "https://developer.salesforce.com/docs/platform/lwc/guide/use-flow-custom-property-editor-sobject-action-example"
+    },
+    {
+      "title": "sObject Tree constraints",
+      "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/resources-composite-sobject-tree.html"
+    },
+    {
+      "title": "Native Apex test CLI",
+      "url": "https://developer.salesforce.com/docs/platform/salesforce-cli-reference/guide/cli_reference_apex_run_test.html"
+    },
+    {
+      "title": "Flow run context",
+      "url": "https://help.salesforce.com/s/articleView?id=sf.flow_distribute_context.htm&language=en_US"
+    },
+    {
+      "title": "FSC Groups and Household",
+      "url": "https://developer.salesforce.com/docs/platform/data-models/guide/groups-and-household.html"
+    },
+    {
+      "title": "FSC models",
+      "url": "https://help.salesforce.com/s/articleView?id=sf.fsc_admin_data_model_diagram.htm&language=en_US&type=5"
+    }
+  ],
+  "scope": "Official documentation supports platform interfaces and baseline capabilities; it does not validate this implementation or any contribution claim."
+}

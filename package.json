@@ -1,0 +1,16 @@
+{
+  "name": "salesforce-uc06",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "example": "node src/cli.mjs --project . --config examples/config.json"
+  },
+  "dependencies": {
+    "fast-xml-parser": "5.11.1"
+  }
+}
